@@ -140,10 +140,10 @@ Combine: "in:inbox is:unread from:boss@company.com"
 ## Data Storage
 
 ```
-~/.jgmcli/
-├── credentials.json   # OAuth client credentials
-├── accounts.json      # Account tokens
-└── attachments/       # Downloaded attachments
+~/.jgcli/                        # Shared with jgccli, jgdcli
+├── credentials.json             # OAuth client credentials (shared)
+├── accounts-gmail.json          # Gmail account tokens
+└── attachments/                 # Downloaded attachments
 ```
 
 ## Output Format

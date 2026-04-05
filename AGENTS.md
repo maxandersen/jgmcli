@@ -41,7 +41,7 @@ dk.xam.jgmcli/
 
 - **Commands:** Each subcommand is a separate class with `@Command` annotation
 - **Output:** `OutputFormatter` handles `--json` flag (JSON vs TSV output)
-- **Storage:** `AccountStorage` manages OAuth tokens in `~/.jgmcli/`
+- **Storage:** `AccountStorage` manages OAuth tokens in `~/.jgcli/` (shared)
 - **Credentials:** Support multiple named credential sets
 
 ## Adding a New Command
@@ -88,10 +88,10 @@ mvn package
 
 ## Config & Data
 
-- `~/.jgmcli/credentials.json` - Default OAuth client credentials
-- `~/.jgmcli/credentials-<name>.json` - Named credential sets
-- `~/.jgmcli/accounts.json` - Stored account tokens
-- `~/.jgmcli/attachments/` - Downloaded attachments
+- `~/.jgcli/credentials.json` - OAuth client credentials (shared with jgccli, jgdcli)
+- `~/.jgcli/credentials-<name>.json` - Named credential sets (shared)
+- `~/.jgcli/accounts-gmail.json` - Gmail account tokens
+- `~/.jgcli/attachments/` - Downloaded attachments
 
 ## Gmail Query Syntax
 

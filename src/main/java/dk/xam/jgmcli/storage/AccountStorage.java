@@ -21,8 +21,8 @@ import java.util.concurrent.ConcurrentHashMap;
 @ApplicationScoped
 public class AccountStorage {
 
-    private static final Path CONFIG_DIR = Paths.get(System.getProperty("user.home"), ".jgmcli");
-    private static final Path ACCOUNTS_FILE = CONFIG_DIR.resolve("accounts.json");
+    private static final Path CONFIG_DIR = Paths.get(System.getProperty("user.home"), ".jgcli");
+    private static final Path ACCOUNTS_FILE = CONFIG_DIR.resolve("accounts-gmail.json");
     private static final Path CREDENTIALS_FILE = CONFIG_DIR.resolve("credentials.json");
 
     private final Map<String, GmailAccount> accounts = new ConcurrentHashMap<>();
