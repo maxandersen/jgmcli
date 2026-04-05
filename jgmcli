@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Wrapper script for jgmcli
+# Requires: mise (with java), built project (mvn package)
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+JAR="$SCRIPT_DIR/target/quarkus-app/quarkus-run.jar"
+
+if [ ! -f "$JAR" ]; then
+    echo "Error: JAR not found. Run 'mvn package' first." >&2
+    exit 1
+fi
+
+cd "$SCRIPT_DIR"
+exec mise exec -- java -jar "$JAR" "$@"

@@ -1,0 +1,6 @@
+[tools]
+java = "latest"
+jbang = "latest"
+maven = "latest"
+node = "lts"
+quarkus = "latest"
