@@ -36,5 +36,5 @@
 // JBang bootstrap for jgmcli - Quarkus Picocli handles entry via @TopCommand
 // 
 // Usage:
-//   jbang main.java --help
-//   jbang https://github.com/maxandersen/jgmcli/blob/main/src/main/java/main.java --help
+//   jbang jgmcli.java --help
+//   jbang https://github.com/maxandersen/jgmcli/blob/main/src/main/java/jgmcli.java --help
