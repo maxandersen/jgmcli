@@ -77,6 +77,27 @@ mvn clean package -DskipTests
 ./jgmcli accounts add you@gmail.com
 ```
 
+### Shared Credentials
+
+Credentials are stored in `~/.jgcli/` and **shared across jgccli, jgmcli, and jgdcli**. Set up once, use with all three tools:
+
+```bash
+# Set credentials once (from any tool)
+jgmcli accounts credentials ~/path/to/credentials.json
+
+# All tools can now use them
+jgccli accounts add you@gmail.com   # Calendar
+jgmcli accounts add you@gmail.com   # Gmail  
+jgdcli accounts add you@gmail.com   # Drive
+```
+
+If you need separate credentials (e.g., different Google Cloud projects), use named credentials:
+
+```bash
+jgmcli accounts credentials ~/work-creds.json --name work
+jgmcli accounts add work@company.com --credentials work
+```
+
 ### Commands
 
 ```bash
