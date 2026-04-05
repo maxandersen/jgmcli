@@ -1,1 +1,1 @@
-Read AGENTS.md for guidance on this project.
+Read .plans/AGENTS.md for guidance on this project.
