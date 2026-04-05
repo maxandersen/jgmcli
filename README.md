@@ -24,10 +24,21 @@ The command structure is nearly identical, making it easy to switch between them
 - Generate Gmail web URLs
 - Tab-separated output for easy parsing
 
+## Run with JBang (no build required)
+
+```bash
+# Run directly from GitHub
+jbang https://github.com/maxandersen/jgmcli/blob/main/src/main/java/main.java --help
+
+# Or clone and run locally
+jbang src/main/java/main.java --help
+jbang src/main/java/main.java accounts list
+```
+
 ## Requirements
 
 - Java 21+
-- Maven 3.8+
+- Maven 3.8+ (only if building)
 - Google Cloud project with Gmail API enabled
 - OAuth 2.0 credentials (Desktop app type)
 
